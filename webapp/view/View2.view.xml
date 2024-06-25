@@ -1,0 +1,96 @@
+<mvc:View controllerName="com.kt.sap.excel.readdataexcel.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+    <Page id="page" title="{i18n>title}" showNavButton="true" navButtonPress="onNavigationView1" >
+        <content >
+        <!-- <IconTabBar class="sapUiResponsiveContentPadding">
+		<items>
+		<IconTabFilter key="info" text="Object Header">
+        <f:SimpleForm id="SimpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false"
+			ariaLabelledBy="Title1" >
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<Title id="Title1" text="FORM DETAILS"/>
+					<ToolbarSpacer />
+				</Toolbar>
+			</f:toolbar>
+			<f:content>
+				<Label text="EmpID" />
+				<Text text="{oExpModel>/EmpID}"/>
+				<Label text="Name" />
+				<Text text="{oExpModel>/Name}"/>
+                <Label text="Age" />
+				<Text text="{oExpModel>/Age}"/>
+                <Label text="Degree" />
+				<Text text="{oExpModel>/Degree}"/>
+                <Label text="Address" />
+				<Text text="{oExpModel>/Address}"/>
+			</f:content>
+		</f:SimpleForm>
+		</IconTabFilter>
+		</items>
+	    </IconTabBar>	
+        <IconTabBar class="sapUiResponsiveContentPadding">
+		<items>
+		<IconTabFilter key="info" text="Marks">
+
+
+
+        </IconTabFilter>
+		</items>
+	    </IconTabBar>	 -->
+        <Table id="tableforView2"   alternateRowColors="false" items="{oExpModel>/items}"  >
+		            <columns >
+					    <Column  >
+			            	<Text text="EmpID" />
+			            </Column>
+			            <Column  >
+			            	<Text text="Name" />
+			            </Column>
+			            <Column>
+			            	<Text text="Sem" />
+			            </Column>
+			            <Column>
+			            	<Text text="Marks" />
+			            </Column>
+			            <!-- <Column >
+			            	<Text text="Address" />
+			            </Column> -->
+			            <!-- <Column>
+			            	<Text text="Expense Amount(EVR)" />
+			            </Column>
+			            <Column>
+			            	<Text text="Status" />
+			            </Column> -->
+		            </columns>
+                    <items>
+                        <ColumnListItem id="colId" type="Navigation" press="onNavigationView2"   >
+                            <cells >
+							   <Text id="expenseID" text="{oExpModel>EmpID}" />
+                               <Text id="expenseName" text="{oExpModel>Name}" />
+                               <Text id="expenseAge" text="{oExpModel>Sem}" />
+                               <Text id="expenseDegree" text="{oExpModel>Marks}" />
+							   
+                               
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                  </Table> 
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,50 @@
+<mvc:View controllerName="com.kt.sap.excel.readdataexcel.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:u="sap.ui.unified">
+    <Page id="page" title="{i18n>title}">
+        <content >
+         <Toolbar id="TB1" class="TBClass1">
+			        <Title text="Expense Table" class="tit1" />
+                    	<u:FileUploader id="FileUploaderId" sameFilenameAllowed="true" iconOnly="false" buttonOnly="true" fileType="XLSX,xlsx"
+							icon="sap-icon://upload" iconFirst="true" style="Emphasized" change="onUpload"/>
+                </Toolbar>
+                <Table   alternateRowColors="false" items="{localModel>/items}"  >
+		            <columns >
+					    <Column  >
+			            	<Text text="EmpID" />
+			            </Column>
+			            <Column  >
+			            	<Text text="Name" />
+			            </Column>
+			            <Column>
+			            	<Text text="Age" />
+			            </Column>
+			            <Column>
+			            	<Text text="Degree" />
+			            </Column>
+			            <Column >
+			            	<Text text="Address" />
+			            </Column>
+			            <!-- <Column>
+			            	<Text text="Expense Amount(EVR)" />
+			            </Column>
+			            <Column>
+			            	<Text text="Status" />
+			            </Column> -->
+		            </columns>
+                    <items>
+                        <ColumnListItem id="colId" type="Navigation" press="onPressNavView"   >
+                            <cells >
+							   <Text id="expenseID" text="{localModel>EmpID}" />
+                               <Text id="expenseName" text="{localModel>Name}" />
+                               <Text id="expenseAge" text="{localModel>Age}" />
+                               <Text id="expenseDegree" text="{localModel>Degree}" />
+							    <Text id="expenseAddress" text="{localModel>Address}" />
+                               
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                  </Table> 
+        </content>
+    </Page>
+</mvc:View>
